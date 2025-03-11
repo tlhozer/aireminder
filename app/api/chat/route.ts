@@ -15,7 +15,7 @@ export async function POST(req: Request) {
 
     // Sistem mesajını ekle
     const allMessages = [
-      systemMessage,
+      { role: "system", content: systemMessage.content },
       ...messages
     ];
 
